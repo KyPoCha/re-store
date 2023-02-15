@@ -10,12 +10,7 @@ const BookListItem = ({ book }) => {
           <img src={coverImage} alt="cover"></img>
         </div>
         <div className="book-details">
-          {
-            //eslint-disable-next-line
-            <a href="#" className="book-title">
-              {name}
-            </a>
-          }
+          <span className="book-title">{name}</span>
           <div className="book-author">{author}</div>
           <div className="book-price">${price}</div>
           <button className="btn btn-info add-to-cart">Add to cart</button>
