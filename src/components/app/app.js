@@ -9,7 +9,7 @@ const App = () => {
     <React.Fragment>
       <main role="main" className="container">
         <Header numsItems={5} total={210}></Header>
-        <Switch>
+        <Switch basename="/re-store">
           <Route path="/" component={HomePage} exact />
           <Route path="/cart" component={CartPage} />
         </Switch>
