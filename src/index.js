@@ -17,7 +17,7 @@ root.render(
   <Provider store={store}>
     <ErrorBoundary>
       <BookstoreServiceProvider value={bookstoreService}>
-        <Router>
+        <Router basename="/re-store">
           <App />
         </Router>
       </BookstoreServiceProvider>
