@@ -1,5 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import {
+  bookAddedToCart,
+  bookRemovedFromCart,
+  allBooksRemovedFromCart,
+} from "../../actions";
 import "./shopping-cart-table.css";
 
 const ShoppingCartTable = ({
@@ -68,18 +73,10 @@ const mapStateToProps = ({ cartItems, orderTotal }) => {
   };
 };
 
-const mapDispatchToProps = () => {
-  return {
-    onIncrease: (id) => {
-      console.log(`INCREASE ${id}`);
-    },
-    onDecrease: (id) => {
-      console.log(`DECREASE ${id}`);
-    },
-    onDelete: (id) => {
-      console.log(`DELETE ${id}`);
-    },
-  };
+const mapDispatchToProps = {
+  onIncrease: bookAddedToCart,
+  onDecrease: bookRemovedFromCart,
+  onDelete: allBooksRemovedFromCart,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);
